@@ -24,7 +24,7 @@ TEMPLATE_BLOG_PATH = os.path.join(BASE_DIR,'blog/templates')
 SECRET_KEY = "+&a)5y^%vmyg$wm1teia#4&cr(&nn#i^*x03!_irsyme&v2vgm"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 
