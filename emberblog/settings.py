@@ -64,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-        
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'emberblog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -94,8 +94,8 @@ DATABASES = {
 DATABASES = {
     'default':dj_database_url.config()
 }
-'''
-#DATABASES['default']['ENGINE'] = 'django_postgrespool'
+
+DATABASES['default']['ENGINE'] = 'django_postgrespool'
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
