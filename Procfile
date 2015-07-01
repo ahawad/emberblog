@@ -1,0 +1,1 @@
+web: gunicorn emberblog.wsgi --log-file -
