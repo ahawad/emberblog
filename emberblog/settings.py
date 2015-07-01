@@ -24,7 +24,7 @@ TEMPLATE_BLOG_PATH = os.path.join(BASE_DIR,'blog/templates')
 SECRET_KEY = "+&a)5y^%vmyg$wm1teia#4&cr(&nn#i^*x03!_irsyme&v2vgm"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -123,6 +123,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/assets/'
 
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -130,3 +131,6 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'mediafiles'
