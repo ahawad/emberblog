@@ -1,1 +1,1 @@
-web: gunicorn emberblog.wsgi --log-file -
+web: waitress-serve --port=$PORT emberblog.wsgi:application
