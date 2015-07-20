@@ -8,4 +8,5 @@ router.register(r'blogs',views.PostViewSet)
 
 urlpatterns = urlpatterns = [
     url(r'^', include(router.urls)),
+    (r'^rest-auth/', include('rest_auth.urls'))
 ]
