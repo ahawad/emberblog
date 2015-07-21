@@ -64,6 +64,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 CORS_URLS_REGEX = r'^/api/.*$'
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'emberblog.urls'
 
