@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,23 +9,41 @@
 
     <base href="/" />
 
-    <link rel="stylesheet" href="{% static 'vendor.css' %}">
-    <link rel="stylesheet" href="{% static 'my-blog.css' %}">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/my-blog.css">
 
-
+    
   </head>
-
   <body>
 
-    <div id="loading-spinner" class= "ui basic segment center aligned">
+    <div id="loading-spinner"class= "ui basic segment center aligned">
       <div class="ui large inline active text loader">Loading</div>
     </div>
 
+    
 
-    <script src="{% static 'vendor.js' %}"></script>
-    <script src="{% static 'my-blog.js' %}"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/my-blog.js"></script>
+    <script>
+    $(function(){
+      $('.ui.sidebar')
+      .sidebar('attach events','.ui.launch.button')
+      .sidebar('attach events', '.menu .item')
+      .sidebar('setting','context','div')
+      ;
 
+      $('#menu-button')
+      .mouseenter(function(){
+    		$(this).stop().animate({width: '100px'}, 300,
+                 function(){$(this).find('.text').show();});
+    	}).mouseleave(function (event){
+    		$(this).find('.text').hide();
+    		$(this).stop().animate({width: '40px'}, 300);
+    	});
 
+    });
+    </script>
+
+    
   </body>
-</div>
 </html>
